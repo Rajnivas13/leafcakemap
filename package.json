@@ -47,6 +47,6 @@
   "devDependencies": {
     "@types/echarts": "^4.9.17",
     "@types/jquery": "^3.5.16",
-    "echarts": "^4.1.0"
+    "echarts": "^5.4.2"
   }
 }

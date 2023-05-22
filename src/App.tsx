@@ -60,20 +60,13 @@ const stateOption = {
       restore: { show: true },
       saveAsImage: { show: true },
     },
-    geo: [{
-      map: 'usa',
-    }],
   },
   series: [
     {
-      name: "USA State PopEstimates",
-      type: "map",
-      nameProperty: "name",
-      roam: true,
-      map: "USA",
-      itemStyle: {
-        emphasis: { label: { show: true } },
-      },
+      name: 'USA State PopEstimates',
+      type: 'map',
+      nameProperty: 'name',
+      map: 'StateMap',
       textFixed: {
         Alaska: [20, -20],
       },
@@ -498,7 +491,7 @@ const stateOption = {
       ],
     },
   ],
-};
+}
 
 //@ts-ignore
 let msaOption = {
@@ -516,13 +509,13 @@ let msaOption = {
         Alaska: [20, -20],
       },
       data: [],
-    }
+    },
   ],
-    geo: [
-      {
-        map:'usa',
-      },
-    ]
+  geo: [
+    {
+      map: "usa",
+    },
+  ],
 };
 
 console.log(msaJSON);
@@ -533,12 +526,8 @@ export default function CountiesMap() {
   const [geoJSONData, setGeoJsonData] = useState<any>(geoJSON);
 
   useEffect(() => {
-    const map = {
-      type: "FeatureCollection",
-      features: geoJSONData["features"],
-    };
 
-    echarts.registerMap("USA", map);
+    echarts.registerMap('StateMap', geoJSON)
   }, [geoJSONData]);
 
   const handleStateClick = () => {
@@ -553,11 +542,9 @@ export default function CountiesMap() {
 
   return (
     <div>
-      <button onClick={handleStateClick}>USA State Map</button>
-      <button onClick={handleCountyClick}>USA MSA Map</button>
       <ReactECharts
         option={mapOptions}
-        notMerge={true}
+        notMerge={false}
         lazyUpdate={true}
         style={{ width: "50%", height: "500px" }}
       />
