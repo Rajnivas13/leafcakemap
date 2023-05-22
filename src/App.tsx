@@ -500,7 +500,6 @@ let msaOption = {
       name: "USA County PopEstimates",
       type: "map",
       nameProperty: "name",
-      roam: true,
       map: "USA",
       itemStyle: {
         emphasis: { label: { show: true } },
