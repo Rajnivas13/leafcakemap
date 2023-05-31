@@ -1,3 +1,10 @@
+Reusable Map component has been created ( we can use to reciprocate the State and msa view of Map)
+
+![image](https://github.com/Rajnivas13/leafcakemap/assets/68956003/23e140dc-c32a-4eab-b93e-f25c04024ce7)
+
+![image](https://github.com/Rajnivas13/leafcakemap/assets/68956003/e5a34576-4600-48c6-9ed2-1c05baf2b608)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
